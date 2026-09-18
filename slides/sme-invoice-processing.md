@@ -7,9 +7,9 @@ footer: "สร้างระบบประมวลผล Invoice ด้ว�
 style: |
   section {
     font-family: 'Sarabun', 'Noto Sans Thai', sans-serif;
-    font-size: 18px;
-    line-height: 1.4;
-    padding: 30px 40px;
+    font-size: 16px;
+    line-height: 1.35;
+    padding: 25px 35px;
     background: linear-gradient(135deg, #e0f7fa 0%, #f3e5f5 100%);
     color: #2d2d2d;
     overflow: hidden;
@@ -23,51 +23,45 @@ style: |
     align-items: center;
     text-align: center;
   }
-  header { color: #00897b; font-size: 14px; }
-  footer { color: #999; font-size: 12px; }
-  h1 { 
-    color: #00897b; 
+  header { color: #00897b; font-size: 13px; }
+  footer { color: #999; font-size: 11px; }
+  h1 {
+    color: #00897b;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0,137,123,0.2);
-    font-size: 32px;
-    margin: 0 0 15px 0;
+    font-size: 28px;
+    margin: 0 0 10px 0;
   }
-  h2 { 
-    color: #7b1fa2; 
-    font-size: 22px;
-    margin: 8px 0;
-  }
-  h3 { 
-    color: #1976d2; 
-    font-size: 18px;
+  h2 {
+    color: #7b1fa2;
+    font-size: 20px;
     margin: 6px 0;
   }
-  p, ul, ol {
-    margin: 6px 0;
+  h3 {
+    color: #1976d2;
+    font-size: 16px;
+    margin: 4px 0;
   }
-  ul, ol {
-    padding-left: 25px;
-  }
-  li {
-    margin: 3px 0;
-  }
-  code { 
-    background: #e0f2f1; 
-    color: #00695c; 
-    padding: 2px 6px;
+  p, ul, ol { margin: 4px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 2px 0; }
+  code {
+    background: #e0f2f1;
+    color: #00695c;
+    padding: 1px 5px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 13px;
     word-break: break-all;
   }
   pre {
     background: #263238;
     color: #eceff1;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 8px 0;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 6px 0;
     overflow-x: auto;
-    font-size: 13px;
-    line-height: 1.3;
+    font-size: 12px;
+    line-height: 1.25;
   }
   pre code {
     background: transparent;
@@ -78,58 +72,66 @@ style: |
   .kawaii-box {
     background: white;
     border: 2px solid #80cbc4;
-    border-radius: 15px;
-    padding: 12px;
-    margin: 8px 0;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 6px 0;
     box-shadow: 0 2px 8px rgba(128,203,196,0.2);
     max-width: 100%;
     overflow: hidden;
   }
-  .emoji-big { font-size: 36px; text-align: center; }
-  table { 
-    margin: 8px auto;
+  .emoji-big { font-size: 32px; text-align: center; }
+  table {
+    margin: 6px auto;
     border-collapse: collapse;
-    font-size: 15px;
+    font-size: 14px;
     max-width: 100%;
   }
-  th { 
-    background: #80cbc4; 
-    color: white; 
-    padding: 6px 10px;
+  th {
+    background: #80cbc4;
+    color: white;
+    padding: 5px 8px;
   }
-  td { 
-    background: white; 
-    padding: 5px 10px;
+  td {
+    background: white;
+    padding: 4px 8px;
   }
   blockquote {
     border-left: 4px solid #80cbc4;
     background: #e0f2f1;
-    padding: 8px 12px;
-    border-radius: 0 10px 10px 0;
-    margin: 8px 0;
-    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 0 8px 8px 0;
+    margin: 6px 0;
+    font-size: 14px;
   }
   img {
-    max-height: 200px;
+    max-height: 180px;
     max-width: 80%;
     display: block;
-    margin: 8px auto;
-    border-radius: 15px;
+    margin: 6px auto;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  section.lead img {
-    max-height: 180px;
-    margin: 15px auto;
+  .invoice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .invoice-grid img {
+    max-height: 120px;
+    width: 100%;
+    object-fit: contain;
+    margin: 0;
   }
   .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 12px;
     align-items: start;
   }
-  .two-col .kawaii-box {
-    margin: 0;
-  }
+  .two-col .kawaii-box { margin: 0; }
+  .compact pre { font-size: 11px; padding: 6px; margin: 4px 0; }
+  .compact .kawaii-box { padding: 8px; margin: 4px 0; }
 ---
 
 <!-- _class: lead -->
@@ -170,12 +172,14 @@ style: |
 
 # 📊 ปัญหาของ SME
 
+<div class="two-col">
+
 <div class="kawaii-box">
 
 ## ❌ แบบเดิม (ทำเอง)
-- รับ invoice เป็นกระดาษ → บันทึกเองใน Excel
+- รับ invoice กระดาษ → บันทึกเองใน Excel
 - คำนวณยอดรวมเอง → ผิดบ่อย
-- สรุปยอดรายเดือน → ใช้เวลา 2-3 ชั่วโมง
+- สรุปยอดรายเดือน → ใช้เวลา 2-3 ชม.
 - หา invoice เก่า → ยากมาก
 
 </div>
@@ -183,10 +187,12 @@ style: |
 <div class="kawaii-box">
 
 ## ✅ แบบใหม่ (ให้ AI ทำ)
-- ถ่ายรูป invoice → AI อ่านอัตโนมัติ
+- ถ่ายรูป → AI อ่านอัตโนมัติ
 - คำนวณยอด + VAT → ถูกต้อง 100%
 - สรุปยอดรายเดือน → 1 คลิก
-- ค้นหา invoice → พิมพ์คำว่า "ค่าไฟ" ก็เจอ
+- ค้นหา → พิมพ์คำว่า "ค่าไฟ" ก็เจอ
+
+</div>
 
 </div>
 
@@ -210,32 +216,22 @@ style: |
 
 </div>
 
-<div class="kawaii-box">
-
-### ตัวอย่างผลลัพธ์
-```
-T1 (Design) → T2 (Develop) → T3 (Test)
-     ↓              ↓              ↓
-  🎨 UI/UX      💻 Code        🧪 QA
-```
-
-</div>
-
 ---
 
 # ทบทวน: `/goal` คืออะไร?
 
+<div class="two-col">
+
 <div class="kawaii-box">
 
 ## 🎯 Concept
-> "บอก AI ว่าต้องการอะไร → AI จะทำงานต่อไปเรื่อยๆ จนกว่าจะเสร็จ"
+> "บอก AI ว่าต้องการอะไร → AI ทำงานจนเสร็จ"
 
 ### ตัวอย่าง
 ```
-/goal สร้าง landing page สำหรับร้านอาหาร
+/goal สร้าง landing page ร้านอาหาร
 - มีเมนูอาหาร
 - มีรูปภาพ
-- มีที่อยู่และเบอร์โทร
 - รองรับ mobile
 ```
 
@@ -252,6 +248,8 @@ T1 (Design) → T2 (Develop) → T3 (Test)
 
 </div>
 
+</div>
+
 ---
 
 # เปรียบเทียบ: Hermes vs OpenAI
@@ -259,7 +257,7 @@ T1 (Design) → T2 (Develop) → T3 (Test)
 <div class="kawaii-box">
 
 | | Hermes `/goal` | OpenAI `/goal` |
-|---|----------------|----------------|
+|---|---|---|
 | **การทำงาน** | ต่อเนื่องจนเสร็จ | ทำครั้งเดียวแล้วจบ |
 | **Orchestration** | มี Kanban, Cron | ไม่มี |
 | **Multi-agent** | หลาย AI ร่วมมือ | AI เดียว |
@@ -268,48 +266,48 @@ T1 (Design) → T2 (Develop) → T3 (Test)
 
 </div>
 
-> 💡 **Hermes = ทีม AI ทำงานร่วมกัน**
-> 💡 **OpenAI = AI เดียวทำงานคนเดียว**
+> 💡 **Hermes = ทีม AI ทำงานร่วมกัน** | **OpenAI = AI เดียวทำงานคนเดียว**
 
 ---
 
 # ตัวอย่าง: สร้างเว็บด้วย Kanban
+
+<div class="two-col">
 
 <div class="kawaii-box">
 
 ## 🎬 3 AI ทำงานร่วมกัน
 
 ```
-T1 researcher 🔍  หาข้อมูลคู่แข่ง
+T1 researcher 🔍  หาข้อมูล
               ↓
-T2 developer 💻  เขียนโค้ด HTML/CSS
+T2 developer 💻  เขียนโค้ด
               ↓
-T3 tester 🧪    ทดสอบ responsive
+T3 tester 🧪    ทดสอบ
 ```
 
 </div>
 
-<div class="kawaii-box">
+<div class="kawaii-box compact">
 
-## คำสั่ง (Copy-paste ได้เลย!)
+## คำสั่ง (Copy-paste!)
 
 ```bash
-# สร้าง profiles
 hermes profile create researcher
 hermes profile create developer
 hermes profile create tester
 
-# สร้าง tasks
-T1=$(hermes kanban create "Research competitors" \
+T1=$(hermes kanban create "Research" \
      --assignee researcher --print-id)
-T2=$(hermes kanban create "Develop website" \
+T2=$(hermes kanban create "Develop" \
      --assignee developer --parent $T1 --print-id)
-T3=$(hermes kanban create "Test responsive" \
+T3=$(hermes kanban create "Test" \
      --assignee tester --parent $T2 --print-id)
 
-# เริ่มทำงาน!
 hermes kanban dispatch
 ```
+
+</div>
 
 </div>
 
@@ -317,79 +315,46 @@ hermes kanban dispatch
 
 # Lab 1: สร้าง Landing Page
 
-<div style="display: flex; gap: 20px;">
+<div class="two-col">
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box compact">
 
-## 📝 ขั้นตอนที่ 1: สร้าง profiles
+## 📝 ขั้นตอนที่ 1-2
 
 ```bash
+# สร้าง profiles
 hermes profile create designer
 hermes profile create developer
 hermes profile create tester
-```
 
-</div>
-
-<div class="kawaii-box" style="flex: 1;">
-
-## 🎨 Profiles คืออะไร?
-
-| Profile | หน้าที่ |
-|---------|---------|
-| 🎨 **designer** | ออกแบบ UI/UX |
-| 💻 **developer** | เขียนโค้ด HTML/CSS |
-| 🧪 **tester** | ทดสอบ responsive |
-
-</div>
-
-</div>
-
-<div style="display: flex; gap: 20px;">
-
-<div class="kawaii-box" style="flex: 1;">
-
-## 📝 ขั้นตอนที่ 2: สร้าง tasks
-
-```bash
-T1=$(hermes kanban create "Design landing page" \
+# สร้าง tasks
+T1=$(hermes kanban create "Design" \
      --assignee designer --print-id)
-T2=$(hermes kanban create "Develop HTML/CSS" \
+T2=$(hermes kanban create "Develop" \
      --assignee developer --parent $T1 --print-id)
-T3=$(hermes kanban create "Test on mobile" \
+T3=$(hermes kanban create "Test" \
      --assignee tester --parent $T2 --print-id)
 ```
 
 </div>
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
 ## 🔗 Dependencies
 
 ```
-T1 (Design)
-  ↓
-T2 (Develop)
-  ↓
-T3 (Test)
+T1 (Design) → T2 (Develop) → T3 (Test)
 ```
 
-**T2 รอ T1 เสร็จก่อน**
-**T3 รอ T2 เสร็จก่อน**
-
-</div>
-
-</div>
-
-<div class="kawaii-box">
-
-## 📝 ขั้นตอนที่ 3: เริ่มทำงาน
+## 📝 ขั้นตอนที่ 3
 
 ```bash
 hermes kanban dispatch
 ```
 
-เปิด browser: http://localhost:9119/kanban
+เปิด browser: `http://localhost:9119/kanban`
+
+</div>
 
 </div>
 
@@ -398,6 +363,8 @@ hermes kanban dispatch
 ---
 
 # สรุป Part 1
+
+<div class="two-col">
 
 <div class="kawaii-box">
 
@@ -420,6 +387,8 @@ hermes kanban dispatch
 
 </div>
 
+</div>
+
 > 🌟 **พร้อมไป Part 2 แล้ว!**
 
 ---
@@ -430,26 +399,19 @@ hermes kanban dispatch
 
 ## สร้างระบบอ่าน Invoice จากกล้อง
 
-<div class="kawaii-box">
+<div class="invoice-grid">
 
-### สิ่งที่จะได้เรียนรู้
-- ✅ สร้าง Web App ด้วย `/goal`
-- ✅ OCR — AI อ่านข้อความจากภาพ
-- ✅ Mobile Camera — ถ่ายรูปจากโทรศัพท์
-- ✅ Dashboard — สรุปยอดตามประเภท
-- ✅ Cron — สรุปอัตโนมัติทุกสัปดาห์
+![Invoice EN](invoices/invoice_001_en.png)
+![Invoice TH](invoices/invoice_002_th.png)
+![Consulting](invoices/invoice_003_consulting.png)
 
 </div>
 
-<div class="kawaii-box">
+<div class="invoice-grid">
 
-### ตัวอย่าง Invoice ที่ใช้
-| ประเภท | ตัวอย่าง |
-|--------|----------|
-| 📄 Invoice ภาษาอังกฤษ | IT Services, Marketing |
-| 📄 Invoice ภาษาไทย | Office Supplies, Restaurant |
-| 🧾 ใบเสร็จ | Receipt |
-| 🧾 ใบกำกับภาษี | Tax Invoice (มี VAT 7%) |
+![Restaurant](invoices/invoice_004_restaurant.png)
+![Marketing](invoices/invoice_005_marketing.png)
+![Receipt](invoices/invoice_006_receipt.png)
 
 </div>
 
@@ -468,78 +430,24 @@ hermes kanban dispatch
 4. บันทึกข้อมูลลง database
 5. สรุปยอดตามประเภท
 
-### 📱 ฟีเจอร์พิเศษ
-- ✅ ถ่ายรูปจากกล้องมือถือ
-- ✅ Upload จากไฟล์ PDF/JPG
-- ✅ Dashboard สรุปยอดรายเดือน
-- ✅ Export Excel ได้
+### 🛠️ เทคโนโลยี
+- 🐍 Python (Flask/FastAPI)
+- 🗄️ SQLite
+- 🤖 AI OCR
+- 📱 HTML5 Responsive
 
 </div>
-
-<div class="kawaii-box">
-
-## 🛠️ เทคโนโลยีที่ใช้
-
-| เทคโนโลยี | ใช้ทำอะไร |
-|-----------|----------|
-| 🐍 **Python** | Backend (Flask/FastAPI) |
-| 🗄️ **SQLite** | เก็บข้อมูล invoice |
-| 🤖 **AI OCR** | อ่านข้อความจากภาพ |
-| 📱 **HTML5** | Responsive + Camera API |
-
-### 📊 ตัวอย่าง Dashboard
-```
-💰 สรุปยอดเดือน ก.ย. 2569
-─────────────────────
-🍔 อาหาร:      ฿45,000
-📦 อุปกรณ์:    ฿28,500
-🔧 บริการ:     ฿67,200
-─────────────────────
-✅ รวม:       ฿140,700
-```
-
-</div>
-
-</div>
-
-<div class="two-col">
 
 <div class="kawaii-box">
 
 ## 📋 ตัวอย่าง Invoice ที่มี
-- invoice_001_en.pdf — IT Services (EN)
-- invoice_002_th.pdf — Office Supplies (TH, มี VAT)
-- invoice_003_consulting.pdf — Consulting
-- invoice_004_restaurant.pdf — Restaurant
-- invoice_005_marketing.pdf — Marketing
-- invoice_006_receipt.pdf — ใบเสร็จ
-- invoice_007_tax_invoice.pdf — ใบกำกับภาษี
 
-</div>
+![Invoice EN](invoices/invoice_001_en.png)
 
-<div class="kawaii-box">
-
-## 🔄 ขั้นตอนการทำงาน
-
+### 🔄 ขั้นตอนการทำงาน
 ```
-📱 ถ่ายรูป/Upload
-      ↓
-🤖 AI อ่านข้อมูล (OCR)
-      ↓
-📊 แสดงผลลัพธ์
-      ↓
-💾 บันทึก SQLite
-      ↓
-📈 Dashboard สรุป
+📱 ถ่ายรูป → 🤖 AI อ่าน → 💾 บันทึก → 📈 สรุป
 ```
-
-### 🎯 ข้อมูลที่อ่านได้
-- เลขที่ Invoice
-- วันที่
-- ชื่อผู้ขาย
-- รายการสินค้า/บริการ
-- ยอดเงินรวม
-- VAT (ถ้ามี)
 
 </div>
 
@@ -549,26 +457,26 @@ hermes kanban dispatch
 
 # Lab 2: สร้าง Web App
 
-<div style="display: flex; gap: 20px;">
+<div class="two-col">
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box compact">
 
-## 📝 ขั้นตอนที่ 1: ตั้ง `/goal`
+## 📝 ตั้ง `/goal`
 
 ```bash
-/goal สร้าง web app สำหรับประมวลผล invoice
+/goal สร้าง web app ประมวลผล invoice
 - ใช้ Flask หรือ FastAPI
 - มีหน้า upload รูป invoice
-- ใช้ AI อ่านข้อมูลจาก invoice (OCR)
-- แสดงผลลัพธ์: เลขที่ invoice, วันที่, ยอดเงิน, ประเภท
-- บันทึกข้อมูลลง SQLite
-- มีหน้า dashboard แสดงสรุปยอดตามประเภท
-- รองรับ mobile (responsive design)
+- ใช้ AI อ่านข้อมูล (OCR)
+- แสดง: เลขที่, วันที่, ยอดเงิน, ประเภท
+- บันทึก SQLite
+- Dashboard สรุปยอดตามประเภท
+- รองรับ mobile
 ```
 
 </div>
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
 ## 🔄 Flow การทำงาน
 
@@ -588,54 +496,39 @@ hermes kanban dispatch
 
 </div>
 
-<div class="kawaii-box">
-
-## 🎬 ผลลัพธ์ที่คาดหวัง
-1. AI สร้าง web app สำเร็จ
-2. มีหน้า upload รูป
-3. มีหน้า dashboard
-4. รองรับ mobile
-
-</div>
-
 > 💡 **AI สร้างเว็บให้ — ไม่ต้องเขียนโค้ด!**
 
 ---
 
 # Lab 3: ทดสอบกับ Invoice
 
+<div class="two-col">
+
 <div class="kawaii-box">
 
-## 📝 ขั้นตอนที่ 1: รัน Web App
+## 📝 ขั้นตอน
 
-```bash
-cd invoice-app
-python app.py
-```
-
-เปิด browser: http://localhost:5000
+1. รัน Web App: `python app.py`
+2. เปิด browser: `http://localhost:5000`
+3. คลิก "Upload Invoice"
+4. เลือกไฟล์ invoice
+5. กด "Process"
+6. รอ AI อ่านข้อมูล
 
 </div>
 
 <div class="kawaii-box">
 
-## 📝 ขั้นตอนที่ 2: อัพโหลด Invoice
+## 📄 ตัวอย่าง Invoice ที่ใช้ทดสอบ
 
-1. คลิก "Upload Invoice"
-2. เลือกไฟล์ `invoice_001.pdf`
-3. กด "Process"
-4. รอ AI อ่านข้อมูล
+![Invoice TH](invoices/invoice_002_th.png)
 
-</div>
-
-<div class="kawaii-box">
-
-## 📝 ขั้นตอนที่ 3: ตรวจสอบผลลัพธ์
-
+### ✅ ตรวจสอบผลลัพธ์
 - เลขที่ invoice ถูกต้องไหม?
 - วันที่ถูกต้องไหม?
 - ยอดเงินถูกต้องไหม?
-- ประเภทถูกต้องไหม?
+
+</div>
 
 </div>
 
@@ -643,60 +536,31 @@ python app.py
 
 # Lab 4: ใช้กล้องโทรศัพท์
 
-<div style="display: flex; gap: 20px;">
+<div class="two-col">
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
-## 📝 ขั้นตอนที่ 1: เปิด Web App บนโทรศัพท์
+## 📝 เปิดบนโทรศัพท์
 
-1. หา IP ของเครื่อง: `ip addr show`
-2. เปิด firewall port 5000
-3. บนโทรศัพท์ เปิด: `http://YOUR_IP:5000`
+1. หา IP: `ip addr show`
+2. เปิด port 5000
+3. โทรศัพท์เปิด: `http://YOUR_IP:5000`
+4. กด "Upload from Camera"
+5. ถ่ายรูป invoice
+6. รอ AI อ่าน
 
 </div>
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
 ## 💡 เคล็ดลับการถ่ายรูป
 
 | ✅ ควรทำ | ❌ ไม่ควรทำ |
 |---------|-----------|
-| ถ่ายในแสงสว่างเพียงพอ | ถ่ายในที่มืด |
+| แสงสว่างเพียงพอ | ที่มืด |
 | ถือกล้องให้ตรง | ถ่ายเอียง |
 | ถ่ายทั้งใบให้ครบ | ถ่ายไม่ครบ |
-| ใช้พื้นหลังเรียบ | พื้นหลังลายตา |
-
-</div>
-
-</div>
-
-<div style="display: flex; gap: 20px;">
-
-<div class="kawaii-box" style="flex: 1;">
-
-## 📝 ขั้นตอนที่ 2: ถ่ายรูป Invoice
-
-1. กดปุ่ม "Upload from Camera"
-2. ถ่ายรูป invoice_001.pdf
-3. อัพโหลด
-4. รอ AI อ่านข้อมูล
-
-</div>
-
-<div class="kawaii-box" style="flex: 1;">
-
-## 📝 ขั้นตอนที่ 3: ตรวจสอบผลลัพธ์
-
-- ภาพจากกล้องอ่านได้ไหม?
-- ภาพชัดพอไหม?
-- แสงสว่างมีผลไหม?
-
-### 🎯 ตัวอย่างผลลัพธ์ที่ดี
-```
-✅ Invoice No: INV-001
-✅ Date: 2026-09-17
-✅ Total: ฿16,050
-```
+| พื้นหลังเรียบ | พื้นหลังลายตา |
 
 </div>
 
@@ -708,16 +572,19 @@ python app.py
 
 # Lab 5: เพิ่มฟีเจอร์
 
-<div class="kawaii-box">
+<div class="two-col">
+
+<div class="kawaii-box compact">
 
 ## 📝 ตั้ง `/goal` เพิ่มฟีเจอร์
 
 ```bash
 /goal ปรับแต่งระบบประมวลผล invoice
-- เพิ่มการแยกประเภทอัตโนมัติ (อาหาร, อุปกรณ์, บริการ)
-- สร้างรายงานสรุปประจำเดือน
-- Export เป็น Excel
-- ส่งแจ้งเตือนทาง LINE เมื่อมียอดเกินกำหนด
+- แยกประเภทอัตโนมัติ
+  (อาหาร, อุปกรณ์, บริการ)
+- รายงานสรุปประจำเดือน
+- Export Excel
+- แจ้งเตือน LINE เมื่อเกินงบ
 ```
 
 </div>
@@ -725,54 +592,45 @@ python app.py
 <div class="kawaii-box">
 
 ## 🎬 ผลลัพธ์ที่คาดหวัง
-1. แยกประเภทอัตโนมัติ
-2. รายงานสรุปประจำเดือน
-3. Export Excel ได้
-4. แจ้งเตือน LINE
+
+1. ✅ แยกประเภทอัตโนมัติ
+2. ✅ รายงานสรุปประจำเดือน
+3. ✅ Export Excel ได้
+4. ✅ แจ้งเตือน LINE
+
+### 📊 ตัวอย่าง Dashboard
+```
+💰 สรุปยอดเดือน ก.ย. 2569
+───────────────────
+🍔 อาหาร:    ฿45,000
+📦 อุปกรณ์:  ฿28,500
+🔧 บริการ:   ฿67,200
+───────────────────
+✅ รวม:     ฿140,700
+```
 
 </div>
 
-> 💡 **เพิ่มฟีเจอร์ได้ง่ายๆ ด้วย `/goal`!**
+</div>
 
 ---
 
 # Lab 6: Automation ด้วย Cron
 
-<div style="display: flex; gap: 20px;">
+<div class="two-col">
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box compact">
 
 ## 📝 ตั้ง Cronjob
 
 ```bash
 cronjob create \
   --schedule "0 9 * * 1" \
-  --prompt "สรุปยอด invoice สัปดาห์นี้ 
-           แบ่งตามประเภท 
-           ส่งรายงานทาง LINE" \
-  --name "Weekly Invoice Summary"
+  --prompt "สรุปยอด invoice
+   สัปดาห์นี้ แบ่งตามประเภท
+   ส่งรายงานทาง LINE" \
+  --name "Weekly Summary"
 ```
-
-</div>
-
-<div class="kawaii-box" style="flex: 1;">
-
-## ⏰ Cron Schedule ตัวอย่าง
-
-| Schedule | ความหมาย |
-|----------|-----------|
-| `0 9 * * 1` | ทุกวันจันทร์ 9:00 |
-| `0 8 * * *` | ทุกวัน 8:00 |
-| `0 */6 * * *` | ทุก 6 ชั่วโมง |
-| `*/30 * * * *` | ทุก 30 นาที |
-
-</div>
-
-</div>
-
-<div style="display: flex; gap: 20px;">
-
-<div class="kawaii-box" style="flex: 1;">
 
 ## 📝 ทดสอบทันที
 
@@ -782,7 +640,15 @@ cronjob run <job_id>
 
 </div>
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
+
+## ⏰ Cron Schedule ตัวอย่าง
+
+| Schedule | ความหมาย |
+|----------|-----------|
+| `0 9 * * 1` | ทุกวันจันทร์ 9:00 |
+| `0 8 * * *` | ทุกวัน 8:00 |
+| `0 */6 * * *` | ทุก 6 ชั่วโมง |
 
 ## 🎬 ผลลัพธ์
 - ทุกวันจันทร์ 9:00 น.
@@ -793,84 +659,42 @@ cronjob run <job_id>
 
 </div>
 
-> 🌸 **อัตโนมัติ 100% — ไม่ต้องทำเอง!**
-
 ---
 
 # สรุป Part 2
 
-<div style="display: flex; gap: 15px;">
+<div class="two-col">
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
 ## ✅ สิ่งที่ได้เรียนรู้
 
 1. **สร้าง Web App** — ด้วย `/goal`
-2. **OCR Invoice** — AI อ่านข้อมูลจากภาพ
-3. **Mobile Camera** — ถ่ายรูปจากโทรศัพท์
+2. **OCR Invoice** — AI อ่านจากภาพ
+3. **Mobile Camera** — ถ่ายจากโทรศัพท์
 4. **Dashboard** — สรุปยอดตามประเภท
-5. **Cron Automation** — สรุปอัตโนมัติทุกสัปดาห์
+5. **Cron** — อัตโนมัติทุกสัปดาห์
 
-### 🎯 Key Takeaways
-- ไม่ต้องเขียนโค้ดเอง
-- ใช้ AI ทำทุกอย่าง
-- ทำงานได้ 24/7
-- ประหยัดเวลา 90%
+### 📊 ผลลัพธ์
+⏱️ เวลา: 1 ชม. | ✅ ถูกต้อง: 95%+ | 💰 ประหยัด: 90%
 
 </div>
 
-<div class="kawaii-box" style="flex: 1;">
-
-## 🎯 สิ่งที่ได้ทำ
-
-- ✅ สร้าง web app อ่าน invoice
-- ✅ ทดสอบกับ invoice 7 แบบ
-- ✅ ใช้กล้องโทรศัพท์ถ่ายรูป
-- ✅ เพิ่มฟีเจอร์แยกประเภท
-- ✅ ตั้ง cron สรุปอัตโนมัติ
-
-### 📊 ผลลัพธ์ที่ได้
-```
-⏱️ เวลาที่ใช้: 1 ชั่วโมง
-📄 Invoice ที่ทดสอบ: 7 แบบ
-✅ ความถูกต้อง: 95%+
-💰 เวลาที่ประหยัด: 90%
-```
-
-</div>
-
-</div>
-
-<div style="display: flex; gap: 15px;">
-
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
 ## 💡 แนวทางพัฒนาต่อ
 
 | ขั้นต่อไป | รายละเอียด |
 |-----------|-----------|
-| 🔗 เชื่อม Google Sheets | ส่งข้อมูล invoice เข้า Sheets อัตโนมัติ |
-| 📊 สร้างกราฟรายเดือน | ดูแนวโน้มค่าใช้จ่าย |
-| 🔔 แจ้งเตือน LINE | เมื่อมียอดเกินงบประมาณ |
-| 🤖 Auto-categorize | AI แยกประเภท invoice อัตโนมัติ |
+| 🔗 Google Sheets | ส่งข้อมูลอัตโนมัติ |
+| 📊 กราฟรายเดือน | ดูแนวโน้ม |
+| 🔔 แจ้งเตือน LINE | เมื่อเกินงบ |
+| 🤖 Auto-categorize | AI แยกประเภท |
 
-</div>
-
-<div class="kawaii-box" style="flex: 1;">
-
-## 🚀 ขั้นตอนต่อไป
-
-### 1. ทดลองกับข้อมูลจริง
-- รวบรวม invoice ของธุรกิจคุณ
-- ทดสอบกับระบบที่สร้าง
-
-### 2. ปรับแต่งให้เหมาะกับงาน
-- เพิ่มประเภท invoice ที่ใช้บ่อย
-- ตั้งค่าการแจ้งเตือน
-
-### 3. ขยายระบบ
-- เชื่อมกับระบบบัญชี
-- สร้างรายงานอัตโนมัติ
+### 🚀 ขั้นตอนต่อไป
+1. ทดลองกับข้อมูลจริง
+2. ปรับแต่งให้เหมาะกับงาน
+3. เชื่อมระบบบัญชี
 
 </div>
 
@@ -880,50 +704,25 @@ cronjob run <job_id>
 
 # 🎁 สรุปทั้งหมด
 
-<div style="display: flex; gap: 20px;">
+<div class="two-col">
 
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
 ## Part 1: /goal + Kanban
 - ✅ `/goal` — สั่งงาน AI
 - ✅ Kanban — หลาย AI ร่วมมือ
-- ✅ Hermes vs OpenAI — ข้อดี/ข้อเสีย
+- ✅ Hermes vs OpenAI
+- ✅ สร้าง landing page สำเร็จ
 
 </div>
 
-<div class="kawaii-box" style="flex: 1;">
-
-## 🎯 สิ่งที่ได้ทำ
-- ✅ สร้าง profiles (designer, developer, tester)
-- ✅ สร้าง tasks พร้อม dependencies
-- ✅ Dispatch และ monitor
-- ✅ ได้ landing page สำเร็จ
-
-</div>
-
-</div>
-
-<div style="display: flex; gap: 20px;">
-
-<div class="kawaii-box" style="flex: 1;">
+<div class="kawaii-box">
 
 ## Part 2: Invoice Processing
-- ✅ สร้าง Web App — ด้วย `/goal`
-- ✅ OCR Invoice — AI อ่านจากภาพ
-- ✅ Mobile Camera — ถ่ายรูปจากโทรศัพท์
-- ✅ Dashboard — สรุปยอด
-- ✅ Cron — อัตโนมัติ
-
-</div>
-
-<div class="kawaii-box" style="flex: 1;">
-
-## 📊 ผลลัพธ์
-- ✅ Web app อ่าน invoice ได้
-- ✅ ทดสอบกับ invoice 7 แบบ
-- ✅ ใช้กล้องโทรศัพท์ถ่ายรูป
-- ✅ เพิ่มฟีเจอร์แยกประเภท
-- ✅ ตั้ง cron สรุปอัตโนมัติ
+- ✅ สร้าง Web App ด้วย `/goal`
+- ✅ OCR Invoice จากภาพ
+- ✅ กล้องโทรศัพท์
+- ✅ Dashboard + Cron อัตโนมัติ
 
 </div>
 
@@ -940,19 +739,13 @@ cronjob run <job_id>
 ## 🎯 ลองทำกับ Invoice จริง
 
 ### ขั้นตอนที่ 1: รวบรวม Invoice
-- Invoice จาก suppliers
-- ใบเสร็จรับเงิน
-- ใบกำกับภาษี
+- Invoice จาก suppliers / ใบเสร็จ / ใบกำกับภาษี
 
 ### ขั้นตอนที่ 2: อัพโหลดเข้าระบบ
-- ถ่ายรูปจากโทรศัพท์
-- อัพโหลดเข้า web app
-- ตรวจสอบผลลัพธ์
+- ถ่ายรูปจากโทรศัพท์ → อัพโหลด → ตรวจสอบ
 
 ### ขั้นตอนที่ 3: วิเคราะห์ข้อมูล
-- ดู dashboard สรุปยอด
-- Export เป็น Excel
-- วิเคราะห์ค่าใช้จ่าย
+- ดู dashboard → Export Excel → วิเคราะห์ค่าใช้จ่าย
 
 </div>
 
@@ -961,6 +754,8 @@ cronjob run <job_id>
 ---
 
 # 🙏 ขอบคุณครับ
+
+<div class="two-col">
 
 <div class="kawaii-box">
 
@@ -973,15 +768,13 @@ cronjob run <job_id>
 
 <div class="kawaii-box">
 
-## 📞 ติดต่อเรา
-- **LINE:** @hermes-support
-- **Email:** support@hermes-agent.com
-
 ## 🎁 สิ่งที่ได้กลับบ้าน
 - ✅ ตัวอย่าง invoice 7 แบบ
 - ✅ Web app ประมวลผล invoice
 - ✅ Lab exercises ทั้งหมด
 - ✅ ความรู้ในการสร้าง automation
+
+</div>
 
 </div>
 

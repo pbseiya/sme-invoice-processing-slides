@@ -6,7 +6,7 @@ header: "SME Invoice Processing Workshop 📄"
 footer: "สร้างระบบประมวลผล Invoice ด้วย Hermes Agent"
 style: |
   section {
-    font-family: 'Sarabun', 'Noto Sans Thai', sans-serif;
+    font-family: 'Sarabun', 'Noto Sans Thai', 'Noto Color Emoji', sans-serif;
     font-size: 16px;
     line-height: 1.35;
     padding: 25px 35px;
@@ -17,6 +17,41 @@ style: |
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  
+  section * {
+    font-family: inherit;
+    unicode-bidi: plaintext;
+  }
+  
+  section li,
+  section p,
+  section td,
+  section th,
+  section h1,
+  section h2,
+  section h3 {
+    line-height: 1.6;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  
+  /* Fix emoji to render inline with text */
+  img.emoji, .emoji {
+    display: inline !important;
+    width: 1em !important;
+    height: 1em !important;
+    vertical-align: -0.1em !important;
+    margin: 0 0.1em 0 0 !important;
+  }
+  
+  img[data-marp-twemoji] {
+    display: inline !important;
+    width: 1.1em !important;
+    height: 1.1em !important;
+    vertical-align: -0.15em !important;
+    margin: 0 0.1em 0 0 !important;
   }
   section.lead {
     justify-content: center;
@@ -77,7 +112,7 @@ style: |
     margin: 6px 0;
     box-shadow: 0 2px 8px rgba(128,203,196,0.2);
     max-width: 100%;
-    overflow: hidden;
+    overflow: visible;
   }
   .emoji-big { font-size: 32px; text-align: center; }
   table {

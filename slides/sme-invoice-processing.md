@@ -21,7 +21,6 @@ style: |
   
   section * {
     font-family: inherit;
-    unicode-bidi: plaintext;
   }
   
   section li,
@@ -32,7 +31,6 @@ style: |
   section h2,
   section h3 {
     line-height: 1.6;
-    word-break: keep-all;
     overflow-wrap: break-word;
     white-space: normal;
   }
@@ -52,6 +50,18 @@ style: |
     height: 1.1em !important;
     vertical-align: -0.15em !important;
     margin: 0 0.1em 0 0 !important;
+  }
+  
+  /* Prevent digit spacing issues */
+  span.num, code {
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+  }
+  
+  /* Global fix for number spacing */
+  section {
+    word-spacing: normal !important;
+    text-justify: auto !important;
   }
   section.lead {
     justify-content: center;
@@ -223,7 +233,7 @@ style: |
 
 ## ✅ แบบใหม่ (ให้ AI ทำ)
 - ถ่ายรูป → AI อ่านอัตโนมัติ
-- คำนวณยอด + VAT → ถูกต้อง 100%
+- คำนวณยอด + VAT → ถูกต้อง `100%`
 - สรุปยอดรายเดือน → 1 คลิก
 - ค้นหา → พิมพ์คำว่า "ค่าไฟ" ก็เจอ
 
@@ -231,7 +241,7 @@ style: |
 
 </div>
 
-> 🌟 **ประหยัดเวลา 90% — ไม่ต้องบันทึกเอง!**
+> 🌟 **ประหยัดเวลา `90%` — ไม่ต้องบันทึกเอง!**
 
 ---
 
@@ -439,17 +449,17 @@ hermes kanban dispatch
 
 <div class="invoice-grid">
 
-![Invoice EN](invoices/invoice_001_en.png)
-![Invoice TH](invoices/invoice_002_th.png)
-![Consulting](invoices/invoice_003_consulting.png)
+![Invoice EN](../invoices/invoice_001_en.png)
+![Invoice TH](../invoices/invoice_002_th.png)
+![Consulting](../invoices/invoice_003_consulting.png)
 
 </div>
 
 <div class="invoice-grid">
 
-![Restaurant](invoices/invoice_004_restaurant.png)
-![Marketing](invoices/invoice_005_marketing.png)
-![Receipt](invoices/invoice_006_receipt.png)
+![Restaurant](../invoices/invoice_004_restaurant.png)
+![Marketing](../invoices/invoice_005_marketing.png)
+![Receipt](../invoices/invoice_006_receipt.png)
 
 </div>
 
@@ -480,7 +490,7 @@ hermes kanban dispatch
 
 ## 📋 ตัวอย่าง Invoice ที่มี
 
-![Invoice EN](invoices/invoice_001_en.png)
+![Invoice EN](../invoices/invoice_001_en.png)
 
 ### 🔄 ขั้นตอนการทำงาน
 ```
@@ -559,7 +569,7 @@ hermes kanban dispatch
 
 ## 📄 ตัวอย่าง Invoice ที่ใช้ทดสอบ
 
-![Invoice TH](invoices/invoice_002_th.png)
+![Invoice TH](../invoices/invoice_002_th.png)
 
 ### ✅ ตรวจสอบผลลัพธ์
 - เลขที่ invoice ถูกต้องไหม?
@@ -711,7 +721,7 @@ cronjob run <job_id>
 5. **Cron** — อัตโนมัติทุกสัปดาห์
 
 ### 📊 ผลลัพธ์
-⏱️ เวลา: 1 ชม. | ✅ ถูกต้อง: 95%+ | 💰 ประหยัด: 90%
+- ⏱️ เวลา: 1 ชม. | ✅ ถูกต้อง: `95%+` | 💰 ประหยัด: `90%`
 
 </div>
 

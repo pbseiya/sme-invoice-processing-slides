@@ -52,6 +52,28 @@ style: |
     margin: 0 0.1em 0 0 !important;
   }
   
+  /* Invoice full grid layout */
+  .invoice-full-grid {
+    position: absolute !important;
+    top: 80px !important;
+    left: 30px !important;
+    right: 30px !important;
+    bottom: 50px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+  
+  .invoice-full-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  }
+  
   /* Prevent digit spacing issues */
   span.num, code {
     letter-spacing: 0 !important;
@@ -167,6 +189,29 @@ style: |
     width: 100%;
     object-fit: contain;
     margin: 0;
+  }
+  .invoice-grid-full {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: calc(100% - 120px);
+    margin: 20px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  .invoice-grid-full img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    justify-self: center;
+    align-self: center;
   }
   .two-col {
     display: grid;
@@ -445,21 +490,18 @@ hermes kanban dispatch
 
 # 📄 Part 2: Invoice Processing
 
-## สร้างระบบอ่าน Invoice จากกล้อง
+---
 
-<div class="invoice-grid">
+## ตัวอย่าง Invoice 6 ประเภท
 
-![Invoice EN](../invoices/invoice_001_en.png)
-![Invoice TH](../invoices/invoice_002_th.png)
-![Consulting](../invoices/invoice_003_consulting.png)
+<div class="invoice-full-grid">
 
-</div>
-
-<div class="invoice-grid">
-
-![Restaurant](../invoices/invoice_004_restaurant.png)
-![Marketing](../invoices/invoice_005_marketing.png)
-![Receipt](../invoices/invoice_006_receipt.png)
+<img src="invoices/invoice_001_en.png" />
+<img src="invoices/invoice_002_th.png" />
+<img src="invoices/invoice_003_consulting.png" />
+<img src="invoices/invoice_004_restaurant.png" />
+<img src="invoices/invoice_005_marketing.png" />
+<img src="invoices/invoice_006_receipt.png" />
 
 </div>
 

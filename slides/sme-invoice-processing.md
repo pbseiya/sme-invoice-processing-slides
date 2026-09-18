@@ -276,21 +276,23 @@ style: |
 
 <div class="kawaii-box">
 
-## 🎬 3 AI ทำงานร่วมกัน
+## 💬 แบบภาษามนุษย์ (ง่ายมาก!)
 
 ```
-T1 researcher 🔍  หาข้อมูล
-              ↓
-T2 developer 💻  เขียนโค้ด
-              ↓
-T3 tester 🧪    ทดสอบ
+/goal สร้าง landing page สำหรับร้านอาหาร
+โดยมีทีม AI 3 คน:
+- researcher หาข้อมูลคู่แข่ง
+- developer เขียนโค้ด HTML/CSS
+- tester ทดสอบ responsive
 ```
+
+**แค่นี้! AI จะจัดการทุกอย่างให้เอง**
 
 </div>
 
 <div class="kawaii-box compact">
 
-## คำสั่ง (Copy-paste!)
+## 🔧 แบบ Command (สำหรับสาย Tech)
 
 ```bash
 hermes profile create researcher
@@ -311,54 +313,55 @@ hermes kanban dispatch
 
 </div>
 
+> 💡 **ทั้งสองแบบได้ผลลัพธ์เหมือนกัน — เลือกแบบที่ถนัด!**
+
 ---
 
 # Lab 1: สร้าง Landing Page
 
 <div class="two-col">
 
+<div class="kawaii-box">
+
+## 💬 แบบภาษามนุษย์
+
+```
+/goal สร้าง landing page สำหรับร้านอาหาร
+- มีเมนูอาหารและรูปภาพ
+- มีที่อยู่และเบอร์โทร
+- รองรับมือถือ
+- ให้ทีม AI 3 คนช่วยกัน:
+  designer ออกแบบ, developer เขียนโค้ด, tester ทดสอบ
+```
+
+**แค่นี้! AI จะสร้าง profiles และ tasks ให้เอง**
+
+</div>
+
 <div class="kawaii-box compact">
 
-## 📝 ขั้นตอนที่ 1-2
+## 🔧 แบบ Command (สำหรับสาย Tech)
 
 ```bash
-# สร้าง profiles
 hermes profile create designer
 hermes profile create developer
 hermes profile create tester
 
-# สร้าง tasks
 T1=$(hermes kanban create "Design" \
      --assignee designer --print-id)
 T2=$(hermes kanban create "Develop" \
      --assignee developer --parent $T1 --print-id)
 T3=$(hermes kanban create "Test" \
      --assignee tester --parent $T2 --print-id)
-```
 
-</div>
-
-<div class="kawaii-box">
-
-## 🔗 Dependencies
-
-```
-T1 (Design) → T2 (Develop) → T3 (Test)
-```
-
-## 📝 ขั้นตอนที่ 3
-
-```bash
 hermes kanban dispatch
 ```
 
-เปิด browser: `http://localhost:9119/kanban`
-
 </div>
 
 </div>
 
-> 🌸 **ดู AI ทำงาน — ไม่ต้องกดอะไร!**
+> 🌸 **ทั้งสองแบบได้ผลลัพธ์เหมือนกัน — เลือกแบบที่ถนัด!**
 
 ---
 
@@ -619,9 +622,24 @@ hermes kanban dispatch
 
 <div class="two-col">
 
+<div class="kawaii-box">
+
+## 💬 แบบภาษามนุษย์
+
+```
+/cronjob ทุกวันจันทร์ 9 โมงเช้า
+ให้สรุปยอด invoice สัปดาห์นี้
+แบ่งตามประเภท
+แล้วส่งรายงานทาง LINE
+```
+
+**แค่นี้! AI จะตั้ง cronjob ให้เอง**
+
+</div>
+
 <div class="kawaii-box compact">
 
-## 📝 ตั้ง Cronjob
+## 🔧 แบบ Command (สำหรับสาย Tech)
 
 ```bash
 cronjob create \
@@ -630,34 +648,16 @@ cronjob create \
    สัปดาห์นี้ แบ่งตามประเภท
    ส่งรายงานทาง LINE" \
   --name "Weekly Summary"
-```
 
-## 📝 ทดสอบทันที
-
-```bash
+# ทดสอบทันที
 cronjob run <job_id>
 ```
 
 </div>
 
-<div class="kawaii-box">
-
-## ⏰ Cron Schedule ตัวอย่าง
-
-| Schedule | ความหมาย |
-|----------|-----------|
-| `0 9 * * 1` | ทุกวันจันทร์ 9:00 |
-| `0 8 * * *` | ทุกวัน 8:00 |
-| `0 */6 * * *` | ทุก 6 ชั่วโมง |
-
-## 🎬 ผลลัพธ์
-- ทุกวันจันทร์ 9:00 น.
-- AI สรุปยอด invoice
-- ส่งรายงานทาง LINE
-
 </div>
 
-</div>
+> 💡 **ทั้งสองแบบได้ผลลัพธ์เหมือนกัน — เลือกแบบที่ถนัด!**
 
 ---
 

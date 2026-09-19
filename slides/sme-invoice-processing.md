@@ -114,15 +114,15 @@ style: |
   li { margin: 2px 0; }
   code {
     background: #e0f2f1;
-    color: #00695c;
+    color: #004d40;
     padding: 1px 5px;
     border-radius: 4px;
     font-size: 13px;
     word-break: break-all;
   }
   pre {
-    background: #263238;
-    color: #eceff1;
+    background: #1e1e1e;
+    color: #d4d4d4;
     border-radius: 8px;
     padding: 8px;
     margin: 6px 0;
@@ -132,9 +132,36 @@ style: |
   }
   pre code {
     background: transparent;
-    color: #eceff1;
+    color: #d4d4d4 !important;
     word-break: normal;
     white-space: pre;
+  }
+  /* Override syntax highlighting for better contrast */
+  pre .hljs-keyword,
+  pre .hljs-selector-tag,
+  pre .hljs-built_in,
+  pre .hljs-name,
+  pre .hljs-tag {
+    color: #569cd6 !important;
+  }
+  pre .hljs-string,
+  pre .hljs-title,
+  pre .hljs-section,
+  pre .hljs-attribute,
+  pre .hljs-literal,
+  pre .hljs-template-tag,
+  pre .hljs-selector-id,
+  pre .hljs-selector-class,
+  pre .hljs-quote,
+  pre .hljs-template-variable,
+  pre .hljs-addition {
+    color: #ce9178 !important;
+  }
+  pre .hljs-comment,
+  pre .hljs-deletion,
+  pre .hljs-number,
+  pre .hljs-regexp {
+    color: #b5cea8 !important;
   }
   .kawaii-box {
     background: white;

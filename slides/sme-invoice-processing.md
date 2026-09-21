@@ -859,6 +859,8 @@ cronjob run <job_id>
 
 </div>
 
+![Workshop Journey](mockups/kawaii_workshop_journey.png)
+
 > 🌟 **คุณสร้างระบบประมวลผล Invoice สำเร็จแล้ว!**
 
 ---

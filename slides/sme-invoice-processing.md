@@ -286,8 +286,8 @@ style: |
 > 💡 **ไม่ต้องเขียนโค้ดแม้แต่บรรทัดเดียว!**
 
 <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-  <img src="mockups/kawaii_part1_agents.png" style="width: 45%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  <img src="mockups/kawaii_part2_invoice.png" style="width: 45%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <img src="mockups/kawaii_part1_agents.png" style="width: 45%; max-height: 200px; object-fit: contain; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <img src="mockups/kawaii_part2_invoice.png" style="width: 45%; max-height: 200px; object-fit: contain; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
 </div>
 
 ---

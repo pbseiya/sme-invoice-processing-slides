@@ -30,7 +30,12 @@ jobs:
       
       - name: Build HTML
         run: |
-          marp slides/sme-invoice-processing.md             --allow-local-files             --html             -o index.html
+          marp slides/sme-invoice-processing.md --allow-local-files --html -o index.html
+      
+      - name: Copy image assets
+        run: |
+          cp -r slides/mockups ./mockups
+          cp -r slides/invoices ./invoices
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

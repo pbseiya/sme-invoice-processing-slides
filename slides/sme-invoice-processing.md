@@ -400,7 +400,7 @@ style: |
 
 <div>
 
-![Multi-Agent Collaboration](mockups/kawaii_part1_agents.png)
+![Hermes vs OpenAI Comparison](mockups/hermes_vs_openai_comparison.png)
 
 </div>
 

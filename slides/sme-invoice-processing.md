@@ -326,6 +326,8 @@ style: |
 
 ## สร้างเว็บง่ายๆ ด้วย AI หลายตัว
 
+<div class="two-col">
+
 <div class="kawaii-box">
 
 ### สิ่งที่จะได้เรียนรู้
@@ -336,7 +338,13 @@ style: |
 
 </div>
 
+<div>
+
 ![Multi-Agent Collaboration](mockups/kawaii_part1_agents.png)
+
+</div>
+
+</div>
 
 ---
 

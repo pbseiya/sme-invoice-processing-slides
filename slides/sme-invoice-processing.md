@@ -384,6 +384,8 @@ style: |
 
 # เปรียบเทียบ: Hermes vs OpenAI
 
+<div class="two-col">
+
 <div class="kawaii-box">
 
 | | Hermes `/goal` | OpenAI `/goal` |
@@ -393,6 +395,14 @@ style: |
 | **Multi-agent** | หลาย AI ร่วมมือ | AI เดียว |
 | **Auto-retry** | มี (Auto-Heal) | ไม่มี |
 | **เหมาะสำหรับ** | งานซับซ้อน | งานง่ายๆ |
+
+</div>
+
+<div>
+
+![Multi-Agent Collaboration](mockups/kawaii_part1_agents.png)
+
+</div>
 
 </div>
 

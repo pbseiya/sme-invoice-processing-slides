@@ -322,8 +322,6 @@ style: |
 
 ---
 
-<!-- _class: lead -->
-
 # 🎯 Part 1: /goal + Kanban
 
 ## สร้างเว็บง่ายๆ ด้วย AI หลายตัว
@@ -337,6 +335,8 @@ style: |
 - ✅ Dependencies — งานต่อกันอัตโนมัติ
 
 </div>
+
+![Multi-Agent Collaboration](mockups/kawaii_part1_agents.png)
 
 ---
 

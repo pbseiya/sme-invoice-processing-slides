@@ -430,6 +430,8 @@ hermes kanban dispatch
 
 </div>
 
+![Kanban Board](mockups/mockup_kanban_board.png)
+
 > 💡 **ทั้งสองแบบได้ผลลัพธ์เหมือนกัน — เลือกแบบที่ถนัด!**
 
 ---
@@ -479,6 +481,8 @@ hermes kanban dispatch
 </div>
 
 > 🌸 **ทั้งสองแบบได้ผลลัพธ์เหมือนกัน — เลือกแบบที่ถนัด!**
+
+![Landing Page Result](mockups/mockup_landing_page.png)
 
 ---
 
@@ -559,7 +563,7 @@ hermes kanban dispatch
 
 ## 📋 ตัวอย่าง Invoice ที่มี
 
-![Invoice EN](../invoices/invoice_001_en.png)
+![Invoice EN](invoices/invoice_001_en.png)
 
 ### 🔄 ขั้นตอนการทำงาน
 ```
@@ -615,6 +619,8 @@ hermes kanban dispatch
 
 > 💡 **AI สร้างเว็บให้ — ไม่ต้องเขียนโค้ด!**
 
+![Web App Interface](mockups/mockup_web_app_upload.png)
+
 ---
 
 # Lab 3: ทดสอบกับ Invoice
@@ -638,7 +644,7 @@ hermes kanban dispatch
 
 ## 📄 ตัวอย่าง Invoice ที่ใช้ทดสอบ
 
-![Invoice TH](../invoices/invoice_002_th.png)
+![Invoice TH](invoices/invoice_002_th.png)
 
 ### ✅ ตรวจสอบผลลัพธ์
 - เลขที่ invoice ถูกต้องไหม?
@@ -685,6 +691,8 @@ hermes kanban dispatch
 
 > 🌸 **ถ่ายรูป → AI อ่าน → เสร็จ!**
 
+![Phone Camera Tips](mockups/mockup_phone_camera.png)
+
 ---
 
 # Lab 5: เพิ่มฟีเจอร์
@@ -730,6 +738,8 @@ hermes kanban dispatch
 
 </div>
 
+![Dashboard Preview](mockups/mockup_dashboard.png)
+
 ---
 
 # Lab 6: Automation ด้วย Cron
@@ -772,6 +782,8 @@ cronjob run <job_id>
 </div>
 
 > 💡 **ทั้งสองแบบได้ผลลัพธ์เหมือนกัน — เลือกแบบที่ถนัด!**
+
+![Cron Workflow](mockups/mockup_cronjob_workflow.png)
 
 ---
 

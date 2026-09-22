@@ -388,13 +388,13 @@ style: |
 
 <div class="kawaii-box">
 
-| | Hermes `/goal` | OpenAI `/goal` |
+| | Hermes `/goal` | OpenAI `/goal` (Codex) |
 |---|---|---|
-| **การทำงาน** | ต่อเนื่องจนเสร็จ | ทำครั้งเดียวแล้วจบ |
+| **การทำงาน** | ต่อเนื่องจนเสร็จ | ต่อเนื่องได้ (Ralph loop) |
 | **Orchestration** | มี Kanban, Cron | ไม่มี |
 | **Multi-agent** | หลาย AI ร่วมมือ | AI เดียว |
-| **Auto-retry** | มี (Auto-Heal) | ไม่มี |
-| **เหมาะสำหรับ** | งานซับซ้อน | งานง่ายๆ |
+| **Auto-retry** | มี (Auto-Heal) | มี (Ralph loop) |
+| **เหมาะสำหรับ** | งานซับซ้อน, ทีม AI | งานเดี่ยว, ง่าย |
 
 </div>
 
@@ -406,7 +406,7 @@ style: |
 
 </div>
 
-> 💡 **Hermes = ทีม AI ทำงานร่วมกัน** | **OpenAI = AI เดียวทำงานคนเดียว**
+> 💡 **Hermes = ทีม AI หลายตัว + Kanban** | **OpenAI = AI เดียว แต่ทำงานต่อเนื่องได้**
 
 ---
 
